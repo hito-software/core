@@ -106,7 +106,7 @@ class ModuleService
 
         if (is_dir($modulePublicPath) && $enable) {
             $files->ensureDirectoryExists($baseDir, 0775, true);
-            $files->link($module->publicPath(), $moduleDir);
+            $files->link($modulePublicPath, $moduleDir);
         } else {
             $files->delete($moduleDir);
         }
