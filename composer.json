@@ -1,0 +1,26 @@
+{
+    "name": "hito-software/core",
+    "description": ":package_description",
+    "keywords": [],
+    "homepage": "https://github.com/hito-software/core",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "composer/composer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hito\\Core\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": "Hito\\Core\\CoreServiceProvider"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
