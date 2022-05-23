@@ -10,7 +10,9 @@ abstract class BaseServiceProvider extends ServiceProvider
     {
         // TODO This should be moved into package discovery
         $files = app('files');
-        $localPublic = __DIR__.'/../' . $localDirectory;
+        $reflection = new \ReflectionClass($this);
+        $basePath = dirname($reflection->getFileName());
+        $localPublic = $basePath.'/../' . $localDirectory;
         $publicPath = public_path(config('app.asset_path') . '/' . config('app.asset_directory_main'));
         $destinationPath = "{$publicPath}/{$destinationDirectory}";
 
