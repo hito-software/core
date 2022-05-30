@@ -15,7 +15,10 @@
     },
     "extra": {
         "laravel": {
-            "providers": "Hito\\Core\\CoreServiceProvider"
+            "providers": "Hito\\Core\\CoreServiceProvider",
+            "aliases": {
+                "Module": "Hito\\Core\\Module\\Facades\\Module"
+            }
         }
     },
     "config": {
